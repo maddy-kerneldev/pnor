@@ -243,6 +243,14 @@ Layout Description
         <ecc/>
     </section>
     <section>
+	<description>Chip Counter Catalog (256K)</description>
+	<eyeCatch>CATALOG</eyeCatch>
+	<physicalOffset>0x1EA2000</physicalOffset>
+	<physicalRegionSize>0x48000</physicalRegionSize>
+	<side>A</side>
+	<ecc/>
+    </section>
+    <section>
         <description>Hostboot Base (576K)</description>
         <!--NOTE: MUST update standalone.simics if offset changes -->
         <!--NOTE: HBB Address must be at pnorSize - 0x99000 for a new
@@ -354,6 +362,14 @@ Layout Description
         <side>B</side>
         <readOnly/>
         <ecc/>
+    </section>
+    <section>
+	<description>Chip Counter Catalog (256K)</description>
+	<eyeCatch>CATALOG</eyeCatch>
+	<physicalOffset>0x3DC4000</physicalOffset>
+	<physicalRegionSize>0x48000</physicalRegionSize>
+	<side>B</side>
+	<ecc/>
     </section>
     <section>
         <description>Hostboot Base (576K)</description>

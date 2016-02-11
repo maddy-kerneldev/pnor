@@ -16,6 +16,7 @@ my $sbec_binary_filename = "";
 my $wink_binary_filename = "";
 my $occ_binary_filename = "";
 my $capp_binary_filename = "";
+my $catalog_binary_filename = "";
 my $openpower_version_filename = "";
 
 while (@ARGV > 0){
@@ -69,6 +70,10 @@ while (@ARGV > 0){
     elsif (/^-capp_binary_filename/i){
         $capp_binary_filename = $ARGV[1] or die "Bad command line arg given: execting a config type.\n";
         shift;
+    }
+    elsif (/^-catalog_binary_filename/i){
+	$catalog_binary_filename = $ARGV[1] or die "Bad command line arg given: execting a config type.\n";
+	shift;
     }
     elsif (/^-openpower_version_filename/i){
         $openpower_version_filename = $ARGV[1] or die "Bad command line arg given: expecting a config type.\n";
@@ -155,6 +160,10 @@ run_command("ecc --inject $scratch_dir/hostboot.temp.bin --output $occ_binary_fi
 #Encode Ecc into CAPP Partition
 run_command("dd if=$capp_binary_filename bs=144K count=1 > $scratch_dir/hostboot.temp.bin");
 run_command("ecc --inject $scratch_dir/hostboot.temp.bin --output $scratch_dir/cappucode.bin.ecc --p8");
+
+#Encode Ecc into CATALOG Partition
+run_command("dd if=$catalog_binary_filename bs=256K count=1 > $scratch_dir/hostboot.temp.bin");
+run_command("ecc --inject $scratch_dir/hostboot.temp.bin --output $scratch_dir/catalog.bin.ecc --p8");
 
 #Create blank binary file for FIRDATA Partition
 run_command("dd if=/dev/zero bs=8K count=1 | tr \"\\000\" \"\\377\" > $scratch_dir/hostboot.temp.bin");
