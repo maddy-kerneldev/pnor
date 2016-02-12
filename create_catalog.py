@@ -214,23 +214,23 @@ for opt, arg in opts:
 ##Event Section
 #
 ##List of mcs read events
-Events(domain=1,start=0,length=0,offset=0x18,flag = 0,index=0,g_cnt=1,string = "mcs0_read")
-Events(domain=1,start=0,length=0,offset=0x20,flag = 0,index=0,g_cnt=1,string = "mcs1_read")
-Events(domain=1,start=0,length=0,offset=0x28,flag = 0,index=0,g_cnt=1,string = "mcs2_read")
-Events(domain=1,start=0,length=0,offset=0x30,flag = 0,index=0,g_cnt=1,string = "mcs3_read")
+Events(domain=1,start=0,length=0,offset=0x18,flag = 0,index=0,g_cnt=1,string = "mcs")
+Events(domain=1,start=0,length=0,offset=0x20,flag = 0,index=0,g_cnt=1,string = "mcs")
+Events(domain=1,start=0,length=0,offset=0x28,flag = 0,index=0,g_cnt=1,string = "mcs")
+Events(domain=1,start=0,length=0,offset=0x30,flag = 0,index=0,g_cnt=1,string = "mcs")
 
 ##List of mcs write events
-Events(domain=1,start=0,length=0,offset=0x38,flag = 0,index=0,g_cnt=1,string = "mcs0_write")
-Events(domain=1,start=0,length=0,offset=0x40,flag = 0,index=0,g_cnt=1,string = "mcs1_write")
-Events(domain=1,start=0,length=0,offset=0x48,flag = 0,index=0,g_cnt=1,string = "mcs2_write")
-Events(domain=1,start=0,length=0,offset=0x50,flag = 0,index=0,g_cnt=1,string = "mcs3_write")
+Events(domain=1,start=0,length=0,offset=0x38,flag = 0,index=0,g_cnt=1,string = "mcs")
+Events(domain=1,start=0,length=0,offset=0x40,flag = 0,index=0,g_cnt=1,string = "mcs")
+Events(domain=1,start=0,length=0,offset=0x48,flag = 0,index=0,g_cnt=1,string = "mcs")
+Events(domain=1,start=0,length=0,offset=0x50,flag = 0,index=0,g_cnt=1,string = "mcs")
 
 ##Group Section
 ##MCS Read group
 mcs_read =  array('H', [0,1,2,3,0,0,0,0,0,0,0,0,0,0,0,0])
-Groups(flag=0,domain=1, start=0, length=0,index=1,ecnt=4, gname="MCS_Read_BW", earr=mcs_read)
+Groups(flag=0,domain=1, start=0, length=0,index=1,ecnt=4, gname="mcs_read", earr=mcs_read)
 ##MCS write group
 mcs_write = array('H', [4,5,6,7,0,0,0,0,0,0,0,0,0,0,0,0])
-Groups(flag=0,domain=1, start=0, length=0,index=1,ecnt=4, gname="MCS_Write_BW", earr=mcs_write)
+Groups(flag=0,domain=1, start=0, length=0,index=1,ecnt=4, gname="mcs_write", earr=mcs_write)
 
 Page0(1, "2016020918450000")
