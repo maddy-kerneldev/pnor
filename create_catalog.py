@@ -214,16 +214,16 @@ for opt, arg in opts:
 ##Event Section
 #
 ##List of mcs read events
-Events(domain=1,start=0,length=0,offset=0x18,flag = 0,index=0,g_cnt=1,string = "mcs")
-Events(domain=1,start=0,length=0,offset=0x20,flag = 0,index=0,g_cnt=1,string = "mcs")
-Events(domain=1,start=0,length=0,offset=0x28,flag = 0,index=0,g_cnt=1,string = "mcs")
-Events(domain=1,start=0,length=0,offset=0x30,flag = 0,index=0,g_cnt=1,string = "mcs")
+Events(domain=1,start=0,length=0,offset=0x18,flag = 0,index=0,g_cnt=1,string = "mcs_00")
+Events(domain=1,start=0,length=0,offset=0x20,flag = 0,index=0,g_cnt=1,string = "mcs_01")
+Events(domain=1,start=0,length=0,offset=0x28,flag = 0,index=0,g_cnt=1,string = "mcs_02")
+Events(domain=1,start=0,length=0,offset=0x30,flag = 0,index=0,g_cnt=1,string = "mcs_03")
 
 ##List of mcs write events
-Events(domain=1,start=0,length=0,offset=0x38,flag = 0,index=0,g_cnt=1,string = "mcs")
-Events(domain=1,start=0,length=0,offset=0x40,flag = 0,index=0,g_cnt=1,string = "mcs")
-Events(domain=1,start=0,length=0,offset=0x48,flag = 0,index=0,g_cnt=1,string = "mcs")
-Events(domain=1,start=0,length=0,offset=0x50,flag = 0,index=0,g_cnt=1,string = "mcs")
+Events(domain=1,start=0,length=0,offset=0x38,flag = 0,index=0,g_cnt=1,string = "mcs_00")
+Events(domain=1,start=0,length=0,offset=0x40,flag = 0,index=0,g_cnt=1,string = "mcs_01")
+Events(domain=1,start=0,length=0,offset=0x48,flag = 0,index=0,g_cnt=1,string = "mcs_02")
+Events(domain=1,start=0,length=0,offset=0x50,flag = 0,index=0,g_cnt=1,string = "mcs_03")
 
 ##Group Section
 ##MCS Read group
